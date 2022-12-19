@@ -14,3 +14,9 @@ P.S. Функции вызывать не обязательно*/
 'use strict';
 
 // Код возьмите из предыдущего домашнего задания
+const showMyDB = (privat) => {
+
+}
+const writeYourGenres = () => {
+
+}
