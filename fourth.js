@@ -26,7 +26,7 @@ const personalMovieDB = {
     actors: {},
     genres: [],
     privat: false,
-    toggleVisibleMyDB: (bollean) => {
+    toggleVisibleMyDB:  (bollean) => {
         if (this.privat !== true) {
             this.privat = true;
         } else {
@@ -39,18 +39,23 @@ const personalMovieDB = {
                 this.genres[i - 1] = prompt(`Ваш любимый жанр под номером ${i}`)
             // }
         }
+    },
+     showMyDB: (hidden) => {
+        if (!hidden) {
+            console.log(personalMovieDB)
+        }
     }
 };
-// let a = prompt('Один из последних просмотренных фильмов?', '')
-// while (a === '' || a.length > 50 || !a) {
-//     a = prompt('Сколько фильмов вы уже посмотрели?')
-// }
-// let b = prompt('На сколько оцените его?', '');
-// let c = prompt('Один из последних просмотренных фильмов?', '');
-// let d = prompt('На сколько оцените его?', '');
-// personalMovieDB.movies[a] = b;
-// personalMovieDB.movies[c] = d;
-// console.log(personalMovieDB)
+let a = prompt('Один из последних просмотренных фильмов?', '')
+while (a === '' || a.length > 50 || !a) {
+    a = prompt('Сколько фильмов вы уже посмотрели?')
+}
+let b = prompt('На сколько оцените его?', '');
+let c = prompt('Один из последних просмотренных фильмов?', '');
+let d = prompt('На сколько оцените его?', '');
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
+console.log(personalMovieDB)
 
 if (personalMovieDB.count < 10) {
     alert("Просмотрено довольно мало фильмов")
@@ -60,13 +65,6 @@ if (personalMovieDB.count < 10) {
     alert("Вы киноман")
 }
 
-
-const showMyDB = (hidden) => {
-    if (!hidden) {
-        console.log(personalMovieDB)
-    }
-}
-// showMyDB(personalMovieDB.privat)
 
 personalMovieDB.writeYourGenres()
 console.log(personalMovieDB.genres)
