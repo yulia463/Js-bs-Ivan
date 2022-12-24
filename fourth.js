@@ -64,8 +64,6 @@ if (personalMovieDB.count < 10) {
 } else {
     alert("Вы киноман")
 }
-
-
 personalMovieDB.writeYourGenres()
 console.log(personalMovieDB.genres)
 
