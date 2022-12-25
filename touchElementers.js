@@ -1,5 +1,5 @@
 window.addEventListener('DOMContentLoaded', () => {
-    const box = document.querySelector('box');
+    const box = document.querySelector('.box');
     box.addEventListener('touchstart', (e) => {
         e.preventDefault();
         console.log('start')
@@ -10,6 +10,6 @@ window.addEventListener('DOMContentLoaded', () => {
     });
     box.addEventListener('touchend', (e) => {
         e.preventDefault();
-        console.log('end')
+        console.log(e.changedTouches[0].pageX)
     });
 });
